@@ -184,3 +184,32 @@ console.log("Poin Pelanggan B : ");
 console.log("Poinnya Adalah : " + Poin_Pelanggan_B);
 console.log("Tier Membernya Adalah : " + TIERMEMBER_Pelanggan_B);
 
+// ============================================================
+// AKTIVITAS 6: Array & For Loop — Daftar Menu Rekomendasi
+// ============================================================
+
+// TODO 6A:
+// Buat variabel Array bernama "menuRekomendasi" yang berisi minimal 5 nama menu kopi/makanan.
+
+let MENU_REKOMENDASI = [
+    "Butterscoth Salt",
+    "Italian Latte",
+    "Matcha Frappe",
+    "Matcha Ube Crumble",
+    "Oreo Frappe"
+];
+
+// TODO 6B:
+// Gunakan perulangan "for loop" untuk mencetak setiap menu ke Console dengan format:
+// "1. Nama Menu", "2. Nama Menu", dst. Gunakan (i + 1) untuk nomor urutnya.
+
+for (let i= 0; i < MENU_REKOMENDASI.length; i++){
+    console.log((i + 1) + "." + MENU_REKOMENDASI[i]);
+}
+
+// TODO 6C:
+// Cetak jumlah total menu di akhir daftar menggunakan properti ".length".
+// Akhiri program dengan: console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
+
+console.log("Jumlah Total Menu : " + MENU_REKOMENDASI.length);
+console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
