@@ -22,13 +22,13 @@
 // AKTIVITAS 1: Setup Berkas & Integrasi JavaScript Eksternal
 // ============================================================
 // Menampilkan judul sistem ke tab Console (F12)
+
 console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 
 // TODO 1: Tulis satu baris console.log() untuk memastikan file app.js sudah terhubung!
 // Contoh output: "Skrip app.js berhasil terhubung!"
 
-
-
+console.log("=== Javascript Telah Terhubung ===");
 
 // ============================================================
 // AKTIVITAS 2: Variabel & Dialog Interaktif
@@ -40,7 +40,12 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "namaKasir" (misal: "Kak Eko") dan "shiftKerja" menggunakan "let".
 // 3. Cetak nilai NAMA_KEDAI, namaKasir, dan shiftKerja ke Console menggunakan console.log().
 
-
+const NAMA_KEDAI = "Kopi PSTI Kampus";
+let NAMA_KASIR = "Bila";
+let SHIFT_KERJA = "Pagi, Siang, Malam";
+console.log("KEDAI : " + NAMA_KEDAI);
+console.log("KASIR : " + NAMA_KASIR);
+console.log("SHIFT : " + SHIFT_KERJA);
 
 
 // ---- DEMO PERBEDAAN LET vs CONST ----
@@ -48,7 +53,8 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // Ubah (re-assign) nilai variabel "namaKasir" dengan nama kasir lain,
 // lalu cetak ke Console untuk membuktikan bahwa variabel "let" nilainya dapat diubah.
 
-
+NAMA_KASIR = "Ami"
+console.log("Kasir baru : " + NAMA_KASIR);
 
 
 // ---- BAGIAN 2B: INPUT INTERAKTIF & PENGANDAIAN DASAR ----
@@ -59,7 +65,15 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 //    - JIKA namaPelanggan ada isinya: tampilkan alert sapaan dan log ke console.
 //    - JIKA namaPelanggan kosong / klik Cancel: beri nilai default "Pelanggan Setia" dan tampilkan alert pemberitahuan.
 
-
+alert("Selamat Datang di Kedai Kopi MUANTULL SYEDEP");
+let NAMA_PELANGGAN = prompt("Masukkan Nama Kamu untuk Berlangganan");
+if (NAMA_PELANGGAN) {
+    alert("HALOO!!!, " + NAMA_PELANGGAN + " Yuk langsung pesan dan berlangganan");
+} else{
+    alert("Kamu tidak memasukkan nama, kamu disebut pelanggan setia");
+    NAMA_PELANGGAN = "Pelanggan Setia";
+    console.log("Pelanggan Setia" + NAMA_PELANGGAN);
+}
 
 
 // ============================================================
@@ -73,71 +87,15 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "totalPoin" yang menjumlahkan ketiga variabel poin di atas.
 // 3. Cetak rincian perolehan poin dan totalPoin ke Console menggunakan console.log().
 
+let POIN_KOPI = 75;
+let POIN_MAKANAN = 65;
+let POIN_MERCHANDISE = 55;
+let JUMLAH_POIN = POIN_KOPI + POIN_MAKANAN + POIN_MERCHANDISE;
 
 
-
-// ============================================================
-// AKTIVITAS 4: Percabangan if-else — Penentuan Tier Membership
-// ============================================================
-
-// TODO 4:
-// 1. Buat variabel "tierMember" dan "benefit" bertipe string kosong ("").
-// 2. Gunakan percabangan "if - else if - else" berdasarkan nilai "totalPoin":
-//    - totalPoin >= 100 : tierMember = "Platinum", benefit = "Diskon 20% + Gratis 1 Minuman Signature"
-//    - totalPoin >= 70  : tierMember = "Gold", benefit = "Diskon 10% di setiap transaksi"
-//    - totalPoin >= 40  : tierMember = "Silver", benefit = "Diskon 5% untuk menu minuman"
-//    - selain itu       : tierMember = "Bronze", benefit = "Member Reguler (kumpulkan poin untuk naik tier)"
-// 3. Cetak hasil tierMember dan benefit ke Console.
-// 4. Tampilkan ringkasan hasil member (nama, total poin, tier, benefit) via dialog alert().
-
-
-
-
-// ============================================================
-// AKTIVITAS 5: Function — Membuat Fungsi yang Bisa Dipakai Ulang
-// ============================================================
-
-// TODO 5A:
-// Buat fungsi "hitungTotalPoin(p1, p2, p3)" yang menerima 3 parameter nilai poin,
-// menjumlahkannya, dan mengembalikan (return) nilai total penjumlahannya.
-
-
-
-
-// TODO 5B:
-// Buat fungsi "tentukanTierMember(poin)" yang menerima 1 parameter nilai poin,
-// dan mengembalikan (return) string nama tier beserta keterangannya.
-
-
-
-
-// TODO 5C:
-// Buktikan bahwa fungsi di atas bisa dipakai ulang (reusable):
-// 1. Hitung total poin dan tentukan tier untuk simulasi Pelanggan B (misal poin: 35, 25, 20).
-// 2. Hitung total poin dan tentukan tier untuk simulasi Pelanggan C (misal poin: 15, 10, 5).
-// 3. Cetak data Pelanggan B dan C ke tab Console.
-
-
-
-
-// ============================================================
-// AKTIVITAS 6: Array & For Loop — Daftar Menu Rekomendasi
-// ============================================================
-
-// TODO 6A:
-// Buat variabel Array bernama "menuRekomendasi" yang berisi minimal 5 nama menu kopi/makanan.
-
-
-
-
-// TODO 6B:
-// Gunakan perulangan "for loop" untuk mencetak setiap menu ke Console dengan format:
-// "1. Nama Menu", "2. Nama Menu", dst. Gunakan (i + 1) untuk nomor urutnya.
-
-
-
-
-// TODO 6C:
-// Cetak jumlah total menu di akhir daftar menggunakan properti ".length".
-// Akhiri program dengan: console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
+console.log("Nama Pelanggan : " + NAMA_PELANGGAN);
+console.log("POIN_KOPI : " + POIN_KOPI);
+console.log("POIN_MAKANAN : " + POIN_MAKANAN);
+console.log("POIN_MERCHANDISE : " + POIN_MERCHANDISE);
+console.log("Poin Kamuu Adalahhhh " + JUMLAH_POIN);
 
